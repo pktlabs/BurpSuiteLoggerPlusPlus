@@ -157,8 +157,8 @@ public class ElasticSearchLogger implements LogEntryListener{
                                 .field("sentcookies", logEntry.sentCookies)
                                 .field("referrer", logEntry.referrerURL)
                                 .field("requestcontenttype", logEntry.requestContentType)
-//                                .field("requestbody", new String(logEntry.requestResponse.getRequest()))
-//                                .field("responsebody", new String(logEntry.requestResponse.getResponse()))
+                                .field("requestbody", new String(logEntry.requestResponse.getRequest()))
+                                .field("responsebody", new String(logEntry.requestResponse.getResponse()))
                             .endObject()
                     );
             return requestBuilder.request();
