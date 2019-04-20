@@ -31,6 +31,14 @@ Screenshots
 
 <br />
 
+### How to Build from Source
+* git clone https://github.com/nccgroup/BurpSuiteLoggerPlusPlus/
+* Install gradle for building the JAR, on Mac `brew install gradle`
+* Modify line 13 of build.gradle in the root directory of the repo with the correct path to the Burp .JAR file for build purposes:
+testCompile files('/Applications/Burp\ Suite\ Professional.app/Contents/java/app/burpsuite_pro.jar')
+* In the root directory of the repo build the jar: gradle fatjar. If this gives errors follow the gradle help. use grade fatjar --info to get some verbosity of the build, and gradle fatjar --debug to get a more verbose build log.
+* The .JAR is outputted in: BurpSuiteLoggerPlusPlus/build/libs
+* Import to Burp and enjoy!
 
 ### Using the application
 
